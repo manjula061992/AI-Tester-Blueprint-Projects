@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testcase Generator - Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <div class="dashboard">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="logo">
+                <h2>🚀 TCG</h2>
+                <p>Testcase Generator</p>
+            </div>
+            <nav class="nav-menu">
+                <a href="/" class="nav-item">
+                    <span class="icon">💬</span>
+                    <span>Chat Generator</span>
+                </a>
+                <a href="/dashboard" class="nav-item active">
+                    <span class="icon">📊</span>
+                    <span>Dashboard</span>
+                </a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Header -->
+            <header class="header">
+                <h1>Testcase Generator Dashboard</h1>
+                <div class="header-actions">
+                    <div class="status-indicator" id="statusIndicator">
+                        <span class="pulse"></span>
+                        <span id="statusText">Checking...</span>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Content Sections -->
+            <div class="content">
+                <!-- Status Cards -->
+                <section class="section">
+                    <h2>System Status</h2>
+                    <div class="cards-grid">
+                        <div class="card" id="copilotCard">
+                            <div class="card-header">
+                                <h3>🤖 GitHub Copilot</h3>
+                                <span class="badge" id="copilotBadge">Checking...</span>
+                            </div>
+                            <div class="card-body">
+                                <p id="copilotMessage">Initializing connection...</p>
+                                <pre id="copilotStatus" style="display:none;"></pre>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-header">
+                                <h3>📈 Generator Stats</h3>
+                                <span class="badge">Ready</span>
+                            </div>
+                            <div class="card-body">
+                                <p><strong>Version:</strong> 1.0.0</p>
+                                <p><strong>Framework:</strong> Java Spring Boot</p>
+                                <p><strong>Output Format:</strong> Selenium WebDriver (Python)</p>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-header">
+                                <h3>📦 Deployment</h3>
+                                <span class="badge success">Active</span>
+                            </div>
+                            <div class="card-body">
+                                <p><strong>Port:</strong> 8080</p>
+                                <p><strong>Framework:</strong> Spring Boot</p>
+                                <p><strong>Status:</strong> Running</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Instructions Section -->
+                <section class="section">
+                    <h2>🎯 Getting Started - Clear Instructions</h2>
+                    
+                    <div class="instruction-container">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h3>Application is Running</h3>
+                                <p>The Java Test Case Generator is already running on <strong>Port 8080</strong>.</p>
+                                <div class="code-block">
+                                    <code>http://localhost:8080</code>
+                                </div>
+                                <p>Built with Java Spring Boot for production-grade performance.</p>
+                            </div>
+                        </div>
+
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h3>Open Chat Generator</h3>
+                                <p>Click on the <strong>Chat Generator</strong> link in the left sidebar, or go to:</p>
+                                <div class="code-block">
+                                    <code>http://localhost:8080/</code>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <h3>Describe Your Testing Scenario</h3>
+                                <p>Enter a detailed description in the chat input. Example:</p>
+                                <div class="code-block">
+                                    <code>"Create testcases for app.vwo.com login page with email, password, remember me button, and submit button"</code>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="step">
+                            <div class="step-number">4</div>
+                            <div class="step-content">
+                                <h3>View Generated Testcases</h3>
+                                <p>The system will generate comprehensive testcases including:</p>
+                                <ul>
+                                    <li>✅ Positive test cases (happy path)</li>
+                                    <li>❌ Negative test cases (error handling)</li>
+                                    <li>⚠️ Edge cases (boundary conditions)</li>
+                                    <li>🔒 Security tests (SQL injection, etc.)</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="step">
+                            <div class="step-number">5</div>
+                            <div class="step-content">
+                                <h3>Export Testcases</h3>
+                                <p>Click <strong>📥 Export as Python</strong> to download the testcases as a Selenium WebDriver script.</p>
+                                <p>The script is production-ready and can be executed directly.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Features Section -->
+                <section class="section">
+                    <h2>✨ Key Features</h2>
+                    <div class="features-grid">
+                        <div class="feature">
+                            <span class="feature-icon">💬</span>
+                            <h4>Chat-Based Input</h4>
+                            <p>Natural language interface for intuitive testcase generation</p>
+                        </div>
+                        <div class="feature">
+                            <span class="feature-icon">☕</span>
+                            <h4>Java Spring Boot</h4>
+                            <p>Enterprise-grade framework for high performance</p>
+                        </div>
+                        <div class="feature">
+                            <span class="feature-icon">📋</span>
+                            <h4>Structured Output</h4>
+                            <p>AAA Pattern (Arrange-Act-Assert) for consistent testcases</p>
+                        </div>
+                        <div class="feature">
+                            <span class="feature-icon">🔧</span>
+                            <h4>Selenium Ready</h4>
+                            <p>Production-ready WebDriver code for immediate use</p>
+                        </div>
+                        <div class="feature">
+                            <span class="feature-icon">📊</span>
+                            <h4>Comprehensive</h4>
+                            <p>Covers happy paths, negative cases, and security tests</p>
+                        </div>
+                        <div class="feature">
+                            <span class="feature-icon">⚡</span>
+                            <h4>Fast Generation</h4>
+                            <p>Generate 5+ testcases in seconds</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- API Endpoints -->
+                <section class="section">
+                    <h2>🔗 API Endpoints</h2>
+                    
+                    <div class="api-docs">
+                        <div class="api-endpoint">
+                            <div class="endpoint-method">POST</div>
+                            <div class="endpoint-path">/api/generate</div>
+                            <p class="endpoint-description">Generate testcases from user input</p>
+                            <div class="code-block">
+<code>{
+  "input": "Create testcases for login page"
+}</code>
+                            </div>
+                        </div>
+
+                        <div class="api-endpoint">
+                            <div class="endpoint-method">GET</div>
+                            <div class="endpoint-path">/api/status</div>
+                            <p class="endpoint-description">Get system and Copilot status</p>
+                        </div>
+
+                        <div class="api-endpoint">
+                            <div class="endpoint-method">GET</div>
+                            <div class="endpoint-path">/api/testcases/:id</div>
+                            <p class="endpoint-description">Retrieve generated testcases</p>
+                        </div>
+
+                        <div class="api-endpoint">
+                            <div class="endpoint-method">GET</div>
+                            <div class="endpoint-path">/api/export/:id</div>
+                            <p class="endpoint-description">Export testcases as Python file</p>
+                        </div>
+
+                        <div class="api-endpoint">
+                            <div class="endpoint-method">GET</div>
+                            <div class="endpoint-path">/api/health</div>
+                            <p class="endpoint-description">Service health check</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Troubleshooting -->
+                <section class="section">
+                    <h2>🆘 Troubleshooting</h2>
+                    
+                    <div class="faq">
+                        <div class="faq-item">
+                            <h4>❓ Cannot open localhost:8080</h4>
+                            <p><strong>Solution:</strong> Make sure Java Spring Boot server is running. Run <code>mvn spring-boot:run</code> in the java-webapp directory</p>
+                        </div>
+
+                        <div class="faq-item">
+                            <h4>❓ Port 8080 already in use</h4>
+                            <p><strong>Solution:</strong> Edit <code>application.properties</code> and change <code>server.port=9090</code></p>
+                        </div>
+
+                        <div class="faq-item">
+                            <h4>❓ Cannot connect to API endpoints</h4>
+                            <p><strong>Solution:</strong> Verify server is running and check browser console for CORS errors</p>
+                        </div>
+
+                        <div class="faq-item">
+                            <h4>❓ Testcases not generating</h4>
+                            <p><strong>Solution:</strong> Check browser console and ensure input is descriptive. Try: "Create testcases for app.vwo.com login page"</p>
+                        </div>
+
+                        <div class="faq-item">
+                            <h4>❓ Export button not working</h4>
+                            <p><strong>Solution:</strong> Generate testcases first, then use the export button that appears</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Footer -->
+                <footer class="section-footer">
+                    <p>💡 <strong>Tip:</strong> For best results, provide detailed scenario descriptions including elements, actions, and expected outcomes.</p>
+                    <p>📚 <strong>Docs:</strong> See the documentation files for detailed setup and usage instructions.</p>
+                </footer>
+            </div>
+        </main>
+    </div>
+
+    <script src="dashboard.js"></script>
+</body>
+</html>

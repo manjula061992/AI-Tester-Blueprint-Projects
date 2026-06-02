@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LLM Testcase Generator - Chat UI</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>🚀 Testcase Generator</h1>
+            <p>Generate production-ready testcases using GitHub Copilot</p>
+        </header>
+
+        <div class="main-content">
+            <div class="chat-panel">
+                <div class="chat-messages" id="chatMessages">
+                    <div class="message bot-message">
+                        <div class="message-content">
+                            <p>👋 Hello! I'm your Testcase Generator powered by GitHub Copilot.</p>
+                            <p>Describe the scenario you want to test, and I'll generate comprehensive testcases for you.</p>
+                            <p><strong>Example:</strong> "Create testcases for app.vwo.com login page with email, password, remember me button, and submit button"</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="input-area">
+                    <input 
+                        type="text" 
+                        id="userInput" 
+                        class="user-input" 
+                        placeholder="Describe your testing scenario..."
+                        onkeypress="handleKeyPress(event)"
+                    >
+                    <button class="send-btn" onclick="sendMessage()">Send</button>
+                </div>
+            </div>
+
+            <div class="output-panel">
+                <div class="output-header">
+                    <h2>Generated Testcases</h2>
+                    <button class="export-btn" id="exportBtn" onclick="exportTestcases()" style="display:none;">
+                        📥 Export as Python
+                    </button>
+                </div>
+                <div class="output-content" id="outputContent">
+                    <p class="placeholder">Testcases will appear here...</p>
+                </div>
+            </div>
+        </div>
+
+        <footer style="text-align: center; color: white; margin-top: 20px;">
+            <p>✨ Powered by Java Spring Boot | <a href="/dashboard" style="color: white;">Dashboard</a></p>
+        </footer>
+    </div>
+
+    <script src="chat.js"></script>
+</body>
+</html>
